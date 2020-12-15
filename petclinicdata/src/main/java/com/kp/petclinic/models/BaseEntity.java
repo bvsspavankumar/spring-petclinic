@@ -1,4 +1,4 @@
-package com.kp.petclinicdata.models;
+package com.kp.petclinic.models;
 
 import java.io.Serializable;
 

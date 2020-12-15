@@ -1,10 +1,13 @@
-package com.kp.petclinicdata.services.map;
+package com.kp.petclinic.services.map;
 
 import java.util.Set;
 
-import com.kp.petclinicdata.models.Vet;
-import com.kp.petclinicdata.services.VetService;
+import org.springframework.stereotype.Service;
 
+import com.kp.petclinic.models.Vet;
+import com.kp.petclinic.services.VetService;
+
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long>
 	implements VetService{
 

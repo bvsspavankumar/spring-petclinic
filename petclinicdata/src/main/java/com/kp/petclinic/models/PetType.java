@@ -1,4 +1,4 @@
-package com.kp.petclinicdata.models;
+package com.kp.petclinic.models;
 
 public class PetType extends BaseEntity{
 

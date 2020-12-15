@@ -1,16 +1,16 @@
-package com.kp.petclinicweb.bootstrap;
+package com.kp.petclinic.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.kp.petclinicdata.models.Owner;
-import com.kp.petclinicdata.models.Vet;
-import com.kp.petclinicdata.services.OwnerService;
-import com.kp.petclinicdata.services.PetService;
-import com.kp.petclinicdata.services.VetService;
-import com.kp.petclinicdata.services.map.OwnerServiceMap;
-import com.kp.petclinicdata.services.map.PetServiceMap;
-import com.kp.petclinicdata.services.map.VetServiceMap;
+import com.kp.petclinic.models.Owner;
+import com.kp.petclinic.models.Vet;
+import com.kp.petclinic.services.OwnerService;
+import com.kp.petclinic.services.PetService;
+import com.kp.petclinic.services.VetService;
+import com.kp.petclinic.services.map.OwnerServiceMap;
+import com.kp.petclinic.services.map.PetServiceMap;
+import com.kp.petclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner{
@@ -19,12 +19,13 @@ public class DataLoader implements CommandLineRunner{
 	private final VetService vs;
 	private final PetService ps;
 	
-	public DataLoader() {
-		os = new OwnerServiceMap();
-		vs = new VetServiceMap();
-		ps = new PetServiceMap();
+	public DataLoader(OwnerService os, VetService vs, PetService ps) {
+		super();
+		this.os = os;
+		this.vs = vs;
+		this.ps = ps;
 	}
-	
+
 	@Override
 	public void run(String... args) throws Exception {
 		
