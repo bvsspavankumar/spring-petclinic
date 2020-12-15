@@ -3,10 +3,10 @@ package com.kp.petclinicdata.services.map;
 import java.util.Set;
 
 import com.kp.petclinicdata.models.Pet;
-import com.kp.petclinicdata.services.CrudService;
+import com.kp.petclinicdata.services.PetService;
 
 public class PetServiceMap extends AbstractMapService<Pet, Long>
-	implements CrudService<Pet, Long>{
+	implements PetService{
 
 	public Set<Pet> findAll() {
 		return super.findAll();

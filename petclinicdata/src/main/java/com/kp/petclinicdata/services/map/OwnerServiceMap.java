@@ -3,10 +3,10 @@ package com.kp.petclinicdata.services.map;
 import java.util.Set;
 
 import com.kp.petclinicdata.models.Owner;
-import com.kp.petclinicdata.services.CrudService;
+import com.kp.petclinicdata.services.OwnerService;
 
 public class OwnerServiceMap extends AbstractMapService<Owner, Long>
-	implements CrudService<Owner, Long>{
+	implements OwnerService {
 
 	public Set<Owner> findAll() {
 		return super.findAll();
@@ -26,5 +26,9 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long>
 	
 	public void deleteById(Long id) {
 		super.deleteById(id);
+	}
+	
+	public Owner findByLastName(String lastName) {
+		return null;
 	}
 }
